@@ -47,21 +47,17 @@ cd LRMC
 
 Create and activate a virtual environment:
 
-<aside>
-
+```
 python3 -m venv venv
 source venv/bin/activate
 
-</aside>
-
+```
 Install required Python packages:
 
-<aside>
-
+```
 pip install PyQt6
 
-</aside>
-
+```
 Ensure ffmpeg is installed on your system:
 
 Debian/Ubuntu:
@@ -91,12 +87,10 @@ Choose “Save” to overwrite or “Save as Copy” to create copies.
 
 Optional: You can create a global command alias to run it from anywhere:
 
-<aside>
-
+```
 alias lrmc='cd /path/to/LRMC && source venv/bin/activate && python [ResolveConverter.py](http://resolveconverter.py/)'
 
-</aside>
-
+```
 ## Türkçe Sürüm
 
 ### 📝 Açıklama
@@ -144,21 +138,17 @@ cd LRMC
 
 Sanal ortam oluştur ve aktif et:
 
-<aside>
-
+```
 python3 -m venv venv
 source venv/bin/activate
 
-</aside>
-
+```
 Python paketlerini yükle:
 
-<aside>
-
+```
 pip install PyQt6
 
-</aside>
-
+```
 ffmpeg kurulu olmalı:
 
 Debian/Ubuntu:
@@ -187,11 +177,11 @@ GUI üzerinden tek video veya klasör seç.
 
 İsteğe bağlı: Terminalden her yerden çalıştırmak için alias oluşturabilirsin:
 
-<aside>
+```
 
 alias lrmc='cd /path/to/LRMC && source venv/bin/activate && python [ResolveConverter.py](http://resolveconverter.py/)'
 
-</aside>
+```
 
 ### ⚖️ Lisans ve Yazar
 
