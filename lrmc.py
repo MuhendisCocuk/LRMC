@@ -5,10 +5,10 @@ import subprocess
 
 VIDEO_EXTENSIONS = ('.mp4', '.mov', '.mkv', '.avi')
 
-class VideoConverter(QWidget):
+class LRMC(QWidget):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("DaVinci Resolve Video Converter")
+        self.setWindowTitle("Linux Resolve Media Converter (LRMC)")
         self.setGeometry(200, 200, 500, 300)
 
         self.video_path = None
@@ -16,7 +16,7 @@ class VideoConverter(QWidget):
 
         layout = QVBoxLayout()
 
-        self.label = QLabel("Video veya Klasör seçilmedi")
+        self.label = QLabel("Video veya klasör seçilmedi")
         layout.addWidget(self.label)
 
         select_video_button = QPushButton("Tek Video Seç")
@@ -30,7 +30,7 @@ class VideoConverter(QWidget):
         self.progress_bar = QProgressBar()
         layout.addWidget(self.progress_bar)
 
-        save_button = QPushButton("Kaydet")
+        save_button = QPushButton("Üzerine Yaz")
         save_button.clicked.connect(lambda: self.convert(copy=False))
         layout.addWidget(save_button)
 
@@ -41,7 +41,9 @@ class VideoConverter(QWidget):
         self.setLayout(layout)
 
     def select_video(self):
-        file_path, _ = QFileDialog.getOpenFileName(self, "Video Dosyası Seç", "", "Video Dosyaları (*.mp4 *.mov *.mkv *.avi)")
+        file_path, _ = QFileDialog.getOpenFileName(
+            self, "Video Dosyası Seç", "", "Video Dosyaları (*.mp4 *.mov *.mkv *.avi)"
+        )
         if file_path:
             self.video_path = file_path
             self.folder_path = None
@@ -113,6 +115,6 @@ class VideoConverter(QWidget):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    window = VideoConverter()
+    window = LRMC()
     window.show()
     sys.exit(app.exec())
